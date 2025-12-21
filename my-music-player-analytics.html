@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau Dashboard — MyMusicPlayerAnalytics</title>
+    <script type="text/javascript" 
+            src="https://public.tableau.com/javascripts/api/tableau-2.min.js">
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #vizContainer {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<div id="vizContainer"></div>
+
+<script type="text/javascript">
+    var containerDiv = document.getElementById("vizContainer");
+    var url = "https://public.tableau.com/views/MyMusicPlayerAnalytics/Dashboard";
+    var options = {
+        hideTabs: true,
+        hideToolbar: false
+    };
+    new tableau.Viz(containerDiv, url, options);
+</script>
+
+</body>
+</html>
